@@ -1,15 +1,10 @@
 package com.e_commerce.util;
 
-import com.e_commerce.exceptions.CustomException;
-import com.e_commerce.exceptions.ErrorResponse;
-import com.e_commerce.service.account.AccountService;
 import com.e_commerce.service.account.RedisService;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 import java.time.Duration;
-import java.util.List;
 
 
 @Component

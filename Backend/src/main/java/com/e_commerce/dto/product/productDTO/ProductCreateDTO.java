@@ -1,6 +1,5 @@
 package com.e_commerce.dto.product.productDTO;
 
-import com.e_commerce.enums.AvailabilityStatus;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

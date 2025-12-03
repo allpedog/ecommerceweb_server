@@ -1,6 +1,5 @@
 package com.e_commerce.configuration;
 
-import com.e_commerce.util.VNPayUtil;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

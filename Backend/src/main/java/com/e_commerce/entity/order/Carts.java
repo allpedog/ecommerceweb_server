@@ -1,6 +1,5 @@
 package com.e_commerce.entity.order;
 
-import com.e_commerce.entity.Restaurant;
 import com.e_commerce.entity.account.Account;
 import com.e_commerce.orther.Timestamped;
 import jakarta.persistence.*;

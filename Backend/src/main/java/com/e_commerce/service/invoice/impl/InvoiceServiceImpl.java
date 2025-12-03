@@ -8,8 +8,6 @@ import com.e_commerce.entity.Voucher;
 import com.e_commerce.entity.invoice.Invoice;
 import com.e_commerce.entity.invoice.InvoiceDetails;
 import com.e_commerce.entity.order.Orders;
-import com.e_commerce.entity.payment.Payment;
-import com.e_commerce.enums.VoucherType;
 import com.e_commerce.exceptions.CustomException;
 import com.e_commerce.exceptions.ErrorResponse;
 import com.e_commerce.mapper.invoice.InvoiceMapper;
@@ -19,9 +17,7 @@ import com.e_commerce.service.account.AccountService;
 import com.e_commerce.service.invoice.InvoiceDetailsService;
 import com.e_commerce.service.invoice.InvoiceService;
 import com.e_commerce.service.order.OrderService;
-
 import com.e_commerce.service.payment.PaymentMethodService;
-import com.e_commerce.service.payment.PaymentService;
 import com.e_commerce.service.voucher.VoucherService;
 import com.e_commerce.specification.InvoiceSpecification;
 import lombok.AllArgsConstructor;

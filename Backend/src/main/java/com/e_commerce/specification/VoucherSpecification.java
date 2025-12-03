@@ -1,8 +1,6 @@
 package com.e_commerce.specification;
 import com.e_commerce.dto.voucher.VoucherFilter;
 import com.e_commerce.entity.Voucher;
-import com.e_commerce.exceptions.CustomException;
-import com.e_commerce.exceptions.ErrorResponse;
 import jakarta.persistence.criteria.Predicate;
 import org.springframework.data.jpa.domain.Specification;
 

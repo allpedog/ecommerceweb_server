@@ -6,7 +6,6 @@ import com.e_commerce.dto.voucher.VoucherCreateForm;
 import com.e_commerce.dto.voucher.VoucherDTO;
 import com.e_commerce.dto.voucher.VoucherFilter;
 import com.e_commerce.entity.Voucher;
-import com.e_commerce.entity.product.Product;
 import com.e_commerce.enums.VoucherType;
 import com.e_commerce.exceptions.CustomException;
 import com.e_commerce.exceptions.ErrorResponse;

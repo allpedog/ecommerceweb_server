@@ -15,13 +15,11 @@ import com.e_commerce.orther.IdGenerator;
 import com.e_commerce.repository.account.AccountRepository;
 import com.e_commerce.service.account.AccountService;
 import com.e_commerce.service.account.TokenService;
+import com.e_commerce.service.account.token.TokenBlacklistService;
 import com.e_commerce.util.JwtUtil;
-
 import com.e_commerce.util.LoginAttemptService;
 import com.e_commerce.util.OtpUtil;
-import com.e_commerce.util.RedisKeyUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.Authentication;
@@ -30,13 +28,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.List;
-import com.e_commerce.service.account.token.TokenBlacklistService;
 
 
 @Service
@@ -369,7 +365,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public List<AccountDTO> getAccountAllByRoleUser() {
-        List<AccountRole> roles = List.of(AccountRole.USER, AccountRole.STAFF);
+        List<AccountRole> roles = List.of(AccountRole.USER, AccountRole.ADMIN);
         List<Account> accounts = accountRepository.findByRoles(roles);
         if (accounts.isEmpty()) {
             throw new CustomException(ErrorResponse.ACCOUNT_NOT_FOUND);

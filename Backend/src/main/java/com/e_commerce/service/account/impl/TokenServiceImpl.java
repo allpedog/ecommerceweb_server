@@ -7,7 +7,6 @@ import com.e_commerce.exceptions.CustomException;
 import com.e_commerce.exceptions.ErrorResponse;
 import com.e_commerce.repository.account.TokenRepository;
 import com.e_commerce.service.account.TokenService;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

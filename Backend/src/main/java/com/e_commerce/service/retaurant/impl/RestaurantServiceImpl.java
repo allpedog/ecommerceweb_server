@@ -2,7 +2,6 @@ package com.e_commerce.service.retaurant.impl;
 
 import com.e_commerce.dto.order.orderDTO.OrderDTO;
 import com.e_commerce.entity.Restaurant;
-import com.e_commerce.entity.order.Orders;
 import com.e_commerce.enums.OrderStatus;
 import com.e_commerce.mapper.order.OrdersMapper;
 import com.e_commerce.orther.IdGenerator;
@@ -58,8 +57,7 @@ public class RestaurantServiceImpl implements RestaurantService {
         if (ordersRepository.existsByRestaurantIdAndOrderStatusIn(id, ACTIVE_ORDER_STATUSES)) {
             throw new RuntimeException("Cannot delete restaurant with active orders");
         }
-        restaurant.setActive(false);
-        restaurantRepository.save(restaurant);
+        restaurantRepository.delete(restaurant);
     }
 
     @Override

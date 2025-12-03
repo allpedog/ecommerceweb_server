@@ -1,8 +1,6 @@
 package com.e_commerce.dto.drone;
 
-import com.e_commerce.entity.Restaurant;
 import com.e_commerce.enums.DroneStatus;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -27,4 +25,5 @@ public class DroneDTO {
 
     private Double avgSpeedKmh = 30.0;
 
+    private Integer restaurantId;
 }

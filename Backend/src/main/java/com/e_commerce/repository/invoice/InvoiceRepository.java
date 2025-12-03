@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import java.time.LocalDateTime;
 
 public interface InvoiceRepository extends JpaRepository<Invoice, Integer>, JpaSpecificationExecutor<Invoice> {
-    long countByCreatedAtBetween(LocalDateTime startOfDay, java.time.LocalDateTime endOfDay);
+    long countByCreatedAtBetween(LocalDateTime startOfDay, LocalDateTime endOfDay);
 
     boolean existsByOrder(Orders order);
 }

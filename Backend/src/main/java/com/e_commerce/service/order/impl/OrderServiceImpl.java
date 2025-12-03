@@ -103,6 +103,7 @@ public class OrderServiceImpl implements OrderService {
         order.setOrderItems(orderItems);
 
         order = ordersRepository.save(order);
+        cartItemsService.deleteAllCartItemsByAccountId();
         return ordersMapper.convertEntityToDTO(order);
     }
 
@@ -277,6 +278,12 @@ public class OrderServiceImpl implements OrderService {
     public PageDTO<OrderDTO> getOrdersByRestaurant(int page, int size, Integer restaurantId) {
         Pageable pageable = PageRequest.of(page - 1, size);
         return ordersMapper.convertEntityPageToDTOPage(ordersRepository.findByRestaurantId(restaurantId, pageable));
+    }
+
+    @Override
+    public void deleteOrder(Integer orderId) {
+        Orders order = getOrderEntityById(orderId);
+        ordersRepository.delete(order);
     }
 
 

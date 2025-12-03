@@ -1,7 +1,6 @@
 package com.e_commerce.exceptions;
 
 import lombok.AllArgsConstructor;
-
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;

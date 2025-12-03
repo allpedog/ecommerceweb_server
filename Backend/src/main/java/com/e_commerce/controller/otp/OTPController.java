@@ -2,7 +2,6 @@ package com.e_commerce.controller.otp;
 
 import com.e_commerce.dto.ApiResponse;
 import com.e_commerce.event.ForgotPasswordEvent;
-import com.e_commerce.exceptions.CustomException;
 import com.e_commerce.util.OtpUtil;
 import com.e_commerce.util.RateLimitService;
 import lombok.RequiredArgsConstructor;

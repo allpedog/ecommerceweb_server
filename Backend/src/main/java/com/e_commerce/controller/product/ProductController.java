@@ -3,17 +3,12 @@ package com.e_commerce.controller.product;
 import com.e_commerce.dto.ApiResponse;
 import com.e_commerce.dto.PageDTO;
 import com.e_commerce.dto.product.productDTO.*;
-import com.e_commerce.dto.product.productDTO.ProductUpdateDTO;
 import com.e_commerce.service.product.ProductService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.PathVariable;
 
 
 

@@ -12,8 +12,8 @@ import com.e_commerce.orther.CloudinaryService;
 import com.e_commerce.orther.IdGenerator;
 import com.e_commerce.repository.product.ProductRepository;
 import com.e_commerce.service.product.CategoryService;
-import com.e_commerce.service.product.ProductService;
 import com.e_commerce.service.product.OptionsGroupService;
+import com.e_commerce.service.product.ProductService;
 import com.e_commerce.service.retaurant.RestaurantService;
 import com.e_commerce.specification.ProductSpecification;
 import lombok.AllArgsConstructor;
@@ -25,7 +25,6 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 import java.util.Map;
 
 @Service
@@ -96,8 +95,6 @@ public class ProductServiceImpl implements ProductService {
             log.info("Image upload result: {}", imageUrl);
             existingProduct.setImgMain((String) imageUrl.get("url"));
         }
-
-
 
         return productMapper.covertEntityToDTO(productRepository.save(existingProduct));
     }

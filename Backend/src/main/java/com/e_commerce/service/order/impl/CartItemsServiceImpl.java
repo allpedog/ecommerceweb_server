@@ -75,7 +75,7 @@ public class CartItemsServiceImpl implements CartItemsService {
 //        log.info("Existing cart item: {}", existingCartItem);
 
         int existingQuantity = existingCartItem.map(CartItems::getQuantity).orElse(0);
-            int totalRequestedQuantity = existingQuantity + quantity;
+        int totalRequestedQuantity = existingQuantity + quantity;
 
 //        log.info("Existing quantity: {}, New quantity: {}, Total requested quantity: {}",
 //                existingQuantity, cartItemCreateForm.getQuantity(), totalRequestedQuantity);

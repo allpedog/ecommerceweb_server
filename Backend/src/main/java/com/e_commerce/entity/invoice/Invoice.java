@@ -4,7 +4,6 @@ import com.e_commerce.entity.Voucher;
 import com.e_commerce.entity.account.Account;
 import com.e_commerce.entity.account.UserInformation;
 import com.e_commerce.entity.order.Orders;
-import com.e_commerce.entity.payment.Payment;
 import com.e_commerce.entity.payment.PaymentMethod;
 import com.e_commerce.orther.Timestamped;
 import jakarta.persistence.*;

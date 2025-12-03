@@ -12,7 +12,6 @@ import com.e_commerce.orther.IdGenerator;
 import com.e_commerce.repository.product.OptionsGroupRepository;
 import com.e_commerce.repository.product.ProductRepository;
 import com.e_commerce.service.product.OptionsGroupService;
-import com.e_commerce.service.product.ProductService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

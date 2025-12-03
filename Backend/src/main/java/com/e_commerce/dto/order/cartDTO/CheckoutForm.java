@@ -1,10 +1,8 @@
 package com.e_commerce.dto.order.cartDTO;
 
-import com.e_commerce.dto.auth.userInfoDTO.UserInfoUpdateDTO;
 import com.e_commerce.dto.order.orderDTO.OrderCreateForm;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import lombok.Builder;
 import lombok.Data;
 
 @Data

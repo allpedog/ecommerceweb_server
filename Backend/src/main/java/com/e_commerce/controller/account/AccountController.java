@@ -1,6 +1,5 @@
 package com.e_commerce.controller.account;
 
-import com.cloudinary.Api;
 import com.e_commerce.dto.ApiResponse;
 import com.e_commerce.dto.auth.accountDTO.*;
 import com.e_commerce.service.account.AccountService;
@@ -10,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController

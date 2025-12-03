@@ -3,7 +3,6 @@ package com.e_commerce.mapper.order;
 import com.e_commerce.dto.order.cartItemDTO.CartItemCreateForm;
 import com.e_commerce.dto.order.cartItemDTO.CartItemDTO;
 import com.e_commerce.entity.order.CartItems;
-import com.e_commerce.entity.product.OptionValues;
 import com.e_commerce.mapper.product.OptionsValuesMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

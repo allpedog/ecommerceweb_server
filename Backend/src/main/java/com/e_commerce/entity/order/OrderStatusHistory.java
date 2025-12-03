@@ -2,8 +2,10 @@ package com.e_commerce.entity.order;
 
 import com.e_commerce.enums.OrderStatus;
 import jakarta.persistence.*;
-import lombok.*;
-
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 

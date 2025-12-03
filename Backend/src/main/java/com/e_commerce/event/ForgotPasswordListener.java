@@ -1,10 +1,8 @@
 package com.e_commerce.event;
 
 import com.e_commerce.service.email.EmailService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationListener;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 @Component

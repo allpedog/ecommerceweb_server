@@ -4,19 +4,15 @@ import com.e_commerce.dto.drone.DroneCreateDTO;
 import com.e_commerce.dto.drone.DroneDTO;
 import com.e_commerce.entity.Drone;
 import com.e_commerce.entity.Restaurant;
-import com.e_commerce.entity.order.Orders;
 import com.e_commerce.enums.DroneStatus;
 import com.e_commerce.mapper.drone.DroneMapper;
 import com.e_commerce.repository.drone.DroneRepository;
 import com.e_commerce.service.drone.DroneService;
-import com.e_commerce.service.drone.DroneTrackingService;
 import com.e_commerce.service.order.OrderService;
 import com.e_commerce.service.retaurant.RestaurantService;
 import lombok.AllArgsConstructor;
-import org.apache.logging.log4j.util.PropertySource;
 import org.springframework.stereotype.Service;
 
-import java.util.Comparator;
 import java.util.List;
 
 @Service
