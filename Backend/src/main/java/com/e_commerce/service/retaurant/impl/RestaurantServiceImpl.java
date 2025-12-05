@@ -11,7 +11,9 @@ import com.e_commerce.service.retaurant.RestaurantService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
+import java.time.LocalDateTime;
 
 @Service
 @AllArgsConstructor
@@ -63,5 +65,26 @@ public class RestaurantServiceImpl implements RestaurantService {
     @Override
     public List<OrderDTO> getOrders(Integer restaurantId) {
         return ordersMapper.convertEntityListToDTOList(ordersRepository.findByRestaurantId(restaurantId));
+    }
+
+    @Override
+    public BigDecimal getTotalRevenue(Integer restaurantId, LocalDateTime startDateTime, LocalDateTime endDateTime) {
+        if (startDateTime == null && endDateTime == null) {
+            return ordersRepository.sumTotalPriceByRestaurantIdAndStatus(restaurantId, OrderStatus.DELIVERED);
+        }
+
+        if (startDateTime != null && endDateTime != null) {
+            return ordersRepository.sumTotalPriceByRestaurantIdAndStatusAndOrderTimeBetween(
+                    restaurantId, OrderStatus.DELIVERED, startDateTime, endDateTime);
+        }
+
+        if (startDateTime != null) {
+            return ordersRepository.sumTotalPriceByRestaurantIdAndStatusAndOrderTimeAfter(
+                    restaurantId, OrderStatus.DELIVERED, startDateTime);
+        }
+
+        // endDateTime != null
+        return ordersRepository.sumTotalPriceByRestaurantIdAndStatusAndOrderTimeBefore(
+                restaurantId, OrderStatus.DELIVERED, endDateTime);
     }
 }

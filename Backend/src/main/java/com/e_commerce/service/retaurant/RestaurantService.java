@@ -5,6 +5,8 @@ import com.e_commerce.entity.Restaurant;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Service
 public interface RestaurantService {
@@ -17,4 +19,6 @@ public interface RestaurantService {
     void delete(Integer id);
 
     List<OrderDTO> getOrders(Integer restaurantId);
+
+    BigDecimal getTotalRevenue(Integer restaurantId, LocalDateTime startDateTime, LocalDateTime endDateTime);
 }
